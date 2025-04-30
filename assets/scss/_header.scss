@@ -1,0 +1,197 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  padding-top: 40px;
+
+  @media (min-width: 768px) {
+    padding-top: 48px;
+  }
+
+  &.active {
+    .header {
+
+      &__burger {
+        width: 15px;
+        height: 15px;
+        background: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.99982 5.37868L2.69652 0.0753784L0.575195 2.1967L5.8785 7.5L0.575195 12.8033L2.69652 14.9246L7.99982 9.62132L13.3031 14.9246L15.4244 12.8033L10.1211 7.5L15.4244 2.1967L13.3031 0.0753784L7.99982 5.37868Z' fill='white' /%3E%3C/svg%3E") center no-repeat;
+      }
+
+      &__nav {
+        transform: translateX(0%);
+      }
+
+      &__logo {
+        @media (max-width: 768px) {
+          &--logo-default {
+            display: none;
+          }
+  
+          &--logo-white {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+  }
+
+  &__burger {
+    display: block;
+    width: 18px;
+    height: 15px;
+    z-index: 3;
+    background: url("data:image/svg+xml,%3Csvg width='18' height='15' viewBox='0 0 18 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 0H18V3H0V0ZM0 6H18V9H0V6ZM18 12H0V15H18V12Z' fill='%23242A45' /%3E%3C/svg%3E") center no-repeat;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    width: 149px;
+    height: 25px;
+    z-index: 3;
+
+    &--logo-white {
+      display: none;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    padding-top: 105px;
+
+    @media (max-width: 768px) {
+      backdrop-filter: blur(32.619380950927734px);
+      background: var(--color-blue-950);
+      opacity: 0.95;
+    }
+
+    @media (min-width: 768px) {
+      position: static;
+      display: block;
+      background-color: transparent;
+      transform: none;
+      padding-top: 0;
+
+      .container {
+        padding: 0;
+        margin: 0;
+        max-width: auto;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 48px;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      text-align: center;
+      padding: 24px 0;
+      border-top: 1px solid rgba(#FFFFFF, 0.15);
+
+      @media (min-width: 768px) {
+        padding: 0;
+        width: unset;
+      }
+
+      &:last-child {
+        .header__nav-link {
+          color: var(--color-white);
+          font-weight: 500;
+          width: 100%;
+          padding: 14px 30px 13px 32px;
+          border-radius: 5px;
+          box-shadow: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
+          background-color: transparent;
+          border: 2px solid var(--color-white);
+
+          @media (min-width: 768px) {
+            padding: 10px 30px 9px 32px;
+            background-color: var(--color-red-400);
+            border-color: var(--color-red-400);
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              color: var(--color-red-400);
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: inline-block;
+      color: var(--color-white);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 0.85;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      @media (min-width: 768px) {
+        font-size: 13px;
+        color: inherit;
+        line-height: 1.31;
+        letter-spacing: 0.12em;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-red-400);
+        }
+      }
+    }
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: auto;
+    padding-bottom: 50px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

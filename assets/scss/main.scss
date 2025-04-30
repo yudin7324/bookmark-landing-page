@@ -1,13 +1,16 @@
 @use 'vars';
 @use 'reset';
+@use 'header';
 
 .main {
-  color: var(--color-black);
+  color: var(--color-blue-950);
   height: 100%;
   background-color: var(--color-white);
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1220px;
   width: 100%;
