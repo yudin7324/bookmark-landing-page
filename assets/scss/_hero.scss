@@ -1,0 +1,42 @@
+.hero {
+  
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-end;
+    padding-top: 108px;
+    padding-bottom: 100px;
+  }
+
+  &__image {
+    &.responsive-media {
+      &::before {
+        padding-top: 66.78;
+      }
+    }
+  }
+
+  &__content {
+    padding-bottom: 23px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.08;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.56;
+    margin-top: 24px;
+    opacity: 0.5;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+  }
+}

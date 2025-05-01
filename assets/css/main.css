@@ -2,6 +2,7 @@
   --color-white: #ffffff;
   --color-blue-600: #5267DF;
   --color-red-400: #FA5959;
+  --color-grey: #f7f7f7;
   --color-grey-50: #9194A2;
   --color-blue-950: #242A45;
 }
@@ -99,11 +100,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
   padding-top: 40px;
 }
 @media (min-width: 768px) {
@@ -278,7 +274,38 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-.main {
+.hero__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-end;
+  padding-top: 108px;
+  padding-bottom: 100px;
+}
+.hero__image.responsive-media::before {
+  padding-top: 66.78;
+}
+.hero__content {
+  padding-bottom: 23px;
+}
+.hero__title {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.08;
+}
+.hero__text {
+  font-size: 18px;
+  line-height: 1.56;
+  margin-top: 24px;
+  opacity: 0.5;
+}
+.hero__btns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.page {
   color: var(--color-blue-950);
   height: 100%;
   background-color: var(--color-white);
@@ -327,19 +354,35 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0.36em;
-  text-transform: uppercase;
-  padding: 13px 43px 13px 38px;
-  border: 1px solid var(--color-black);
-  background-color: var(--color-white);
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  padding: 8px 22px;
+  background-color: var(--color-blue-600);
+  border: 2px solid var(--color-blue-600);
+  border-radius: 5px;
+  box-shadow: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
   transition: all 0.3s ease-in-out;
 }
-.btn:hover {
-  background-color: var(--color-black);
-  color: var(--color-white);
+@media (hover: hover) {
+  .btn:hover {
+    background-color: transparent;
+    color: var(--color-blue-600);
+  }
+}
+.btn--secondary {
+  color: rgba(36, 42, 69, 0.75);
+  background-color: var(--color-grey);
+  border-color: transparent;
+}
+@media (hover: hover) {
+  .btn--secondary:hover {
+    color: rgba(36, 42, 69, 0.75);
+    background-color: transparent;
+    border-color: rgba(36, 42, 69, 0.75);
+  }
 }
 
 .no-scroll {
