@@ -2,6 +2,7 @@
 @use 'reset';
 @use 'header';
 @use 'hero';
+@use 'features';
 
 .page {
   color: var(--color-blue-950);
@@ -52,6 +53,7 @@
 }
 
 .btn {
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   line-height: 2;
@@ -94,4 +96,30 @@
 .no-scroll {
   overflow: hidden;
   height: 100vh;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 2.17;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 32px;
+    line-height: 1.62;
+  }
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.67;
+  text-align: center;
+  opacity: 0.5;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.56;
+    margin-top: 16px;
+    max-width: 540px;
+  }
 }
