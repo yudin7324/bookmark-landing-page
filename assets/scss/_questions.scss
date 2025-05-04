@@ -1,0 +1,13 @@
+.questions {
+  margin-top: 140px;
+    
+  @media (min-width: 991px) {
+    margin-top: 149px;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

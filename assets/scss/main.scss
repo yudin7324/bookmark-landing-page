@@ -3,6 +3,8 @@
 @use 'header';
 @use 'hero';
 @use 'features';
+@use 'extensions';
+@use 'questions';
 
 .page {
   color: var(--color-blue-950);

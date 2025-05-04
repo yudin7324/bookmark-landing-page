@@ -1,5 +1,4 @@
 .features {
-  
 
   &__heading {
     display: flex;
@@ -81,7 +80,10 @@
       display: none;
       position: relative;
       padding-top: 72px;
-      padding-bottom: 89px;
+
+      @media (min-width: 991) {
+        padding-bottom: 89px;
+      }
 
       &.active {
         display: block;
