@@ -54,6 +54,7 @@ input,
 textarea,
 button {
   border: none;
+  font-family: "Rubik", sans-serif;
   outline: none;
   background: none;
   padding: 0;
@@ -646,10 +647,263 @@ h1, h2, h3, h4, h5, h6, p {
     margin-top: 149px;
   }
 }
+.questions__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .questions__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.questions__accordion {
+  max-width: 540px;
+  margin-top: 56px;
+  border-top: 1px solid rgba(36, 42, 69, 0.15);
+}
+.questions__accordion-section {
+  border-bottom: 1px solid rgba(36, 42, 69, 0.15);
+  overflow: hidden;
+}
+.questions__accordion-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 23px;
+  font-size: 15px;
+  line-height: 2.13;
+  padding: 19px 0 13px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+  .questions__accordion-title {
+    font-size: 18px;
+    line-height: 1.78;
+  }
+}
+@media (hover: hover) {
+  .questions__accordion-title:hover {
+    color: var(--color-red-400);
+  }
+}
+.questions__accordion-title::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L10 10L18 2' stroke='%235267DF' stroke-width='3' /%3E%3C/svg%3E") center no-repeat;
+}
+.active .questions__accordion-title::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='13' viewBox='0 0 20 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 11L10 3L18 11' stroke='%23FA5959' stroke-width='3' /%3E%3C/svg%3E");
+}
+.questions__accordion-content {
+  font-size: 15px;
+  line-height: 2.25;
+  letter-spacing: 0.01em;
+  opacity: 0.75;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+@media (min-width: 768px) {
+  .questions__accordion-content {
+    font-size: 16px;
+  }
+}
+.questions__accordion-content p {
+  padding-bottom: 29px;
+}
+.active .questions__accordion-content {
+  max-height: 300px;
+}
+.questions__btn {
+  margin-top: 48px;
+}
+@media (min-width: 768px) {
+  .questions__btn {
+    margin-top: 54px;
+  }
+}
+
+.contact {
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  padding: 60px 0;
+  margin-top: 123px;
+}
+@media (min-width: 768px) {
+  .contact {
+    padding: 58px 0 74px;
+    margin-top: 149px;
+  }
+}
+.contact__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__subtitle {
+  color: inherit;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 3.33;
+  letter-spacing: 0.38em;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contact__subtitle {
+    font-size: 13px;
+    line-height: 3.08;
+  }
+}
+.contact__title {
+  color: inherit;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  text-align: center;
+  max-width: 408px;
+}
+@media (min-width: 768px) {
+  .contact__title {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-top: 24px;
+  }
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .contact__form {
+    flex-direction: row;
+    align-items: flex-start;
+    width: unset;
+    margin-top: 36px;
+  }
+}
+.contact__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contact__field {
+    width: 300px;
+  }
+}
+.contact__field::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10' cy='10' r='10' fill='%23FA5959' /%3E%3Crect x='9' y='5' width='2' height='7' rx='1' fill='white' /%3E%3Crect x='9' y='13' width='2' height='2' rx='1' fill='white' /%3E%3C/svg%3E") center no-repeat;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.contact__field.error::after {
+  opacity: 1;
+}
+.contact__field-input {
+  position: relative;
+  z-index: 2;
+  color: var(--color-blue-950);
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  padding: 10px 52px 10px 20px;
+  height: 48px;
+}
+.contact__field-input::placeholder {
+  color: rgba(36, 42, 69, 0.25);
+}
+.contact__field-input.error {
+  border-color: var(--color-red-400);
+}
+.contact__field-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  color: inherit;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  padding: 4px 0 6px 12px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0 0 5px 5px;
+  transform: translateY(0%);
+}
+@media (min-width: 768px) {
+  .contact__field-error {
+    transform: translateY(0%);
+  }
+}
+.contact__field-error.error {
+  transform: translateY(0%);
+  position: relative;
+}
+@media (min-width: 768px) {
+  .contact__field-error.error {
+    position: absolute;
+    transform: translateY(100%);
+  }
+}
+.contact__field-error::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: -10px;
+  z-index: -1;
+  background-color: var(--color-red-400);
+  border-radius: 0 0 5px 5px;
+}
+.contact__btn {
+  display: block;
+  height: 48px;
+  width: 100%;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 0 24px;
+  box-shadow: 0 8px 8px -4px rgba(73, 93, 207, 0.2);
+  background: var(--color-red-400);
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .contact__btn {
+    width: unset;
+  }
+}
+@media (hover: hover) {
+  .contact__btn:hover {
+    border-color: var(--color-red-400);
+    color: var(--color-red-400);
+    background-color: var(--color-white);
+  }
 }
 
 .footer {
@@ -743,7 +997,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 auto;
   max-width: 1220px;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 32px;
 }
 @media (min-width: 600px) {
   .container {

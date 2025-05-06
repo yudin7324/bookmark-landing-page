@@ -181,29 +181,65 @@
             <h2 class="questions__title title">Frequently Asked Questions</h2>
             <p class="questions__text text">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
           </div>
-
-          <div class="questions__accordion">
-            <div class="questions__accordion-section">
-              <div class="questions__accordion-title">What is Bookmark?</div>
+          <div class="js-accordion questions__accordion">
+            <div class="js-accordion-section questions__accordion-section">
+              <div class="js-accordion-title questions__accordion-title">What is Bookmark?</div>
+              <div class="questions__accordion-content">
+                <p>A bookmark lets you save your favorite websites in your browser so you can return to them later with a single click. It’s a great way to keep track of important or frequently visited pages. Bookmarks can usually be organized into folders for better management. Most browsers also let you sync your bookmarks across devices. This feature is especially useful for productivity and quick access.</p>
+              </div>
+            </div>
+            <div class="js-accordion-section questions__accordion-section">
+              <div class="js-accordion-title questions__accordion-title">How can I request a new browser?</div>
+              <div class="questions__accordion-content">
+                <p>A bookmark lets you save your favorite websites in your browser so you can return to them later with a single click. It’s a great way to keep track of important or frequently visited pages. Bookmarks can usually be organized into folders for better management. Most browsers also let you sync your bookmarks across devices. This feature is especially useful for productivity and quick access.</p>
+              </div>
+            </div>
+            <div class="js-accordion-section questions__accordion-section">
+              <div class="js-accordion-title questions__accordion-title">Is there a mobile app?</div>
+              <div class="questions__accordion-content">
+                <p>A bookmark lets you save your favorite websites in your browser so you can return to them later with a single click. It’s a great way to keep track of important or frequently visited pages. Bookmarks can usually be organized into folders for better management. Most browsers also let you sync your bookmarks across devices. This feature is especially useful for productivity and quick access.</p>
+              </div>
+            </div>
+            <div class="js-accordion-section questions__accordion-section">
+              <div class="js-accordion-title questions__accordion-title">What about other Chromium browsers?</div>
               <div class="questions__accordion-content">
                 <p>A bookmark lets you save your favorite websites in your browser so you can return to them later with a single click. It’s a great way to keep track of important or frequently visited pages. Bookmarks can usually be organized into folders for better management. Most browsers also let you sync your bookmarks across devices. This feature is especially useful for productivity and quick access.</p>
               </div>
             </div>
           </div>
-          
+          <button type="button" class="questions__btn btn" aria-label="more btn">More Info</button>
         </div>
       </div>
     </section>
 
+    <section class="contact">
+      <div class="container">
+        <div class="contact__wrap">
+
+          <h3 class="contact__subtitle">35,000+ ALREADY JOINED</h3>
+          <h2 class="contact__title">Stay up-to-date with what we’re doing</h2>
+
+          <form action="" class="js-form contact__form" novalidate>
+
+            <div class="js-form-field contact__field">
+              <input class="js-form-input contact__field-input" type="email" placeholder="Enter your email address">
+              <span class="js-form-error contact__field-error">Whoops, make sure it’s an email</span>
+            </div>
+            <button type="submit" class="contact__btn">
+              Contact Us
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__wrap">
-
           <figure class="footer__logo">
             <img src="./assets/images/logo-footer.svg" alt="logo">
           </figure>
-
           <nav class="footer__nav">
             <ul class="footer__nav-list">
               <li class="footer__nav-item">
@@ -217,7 +253,6 @@
               </li>
             </ul>
           </nav>
-
           <ul class="footer__media">
             <li class="footer__media-item">
               <a href="#" class="footer__media-link">
